@@ -109,3 +109,17 @@ gcloud config list project
 ```
 gcloud app create --project=$DEVSHELL_PROJECT_ID
 ```
+
+## Deployment Manager を使ってデプロイを行う
+
+初回
+
+```
+gcloud deployment-manager deployments create my-first-depl --config mydeploy.yaml
+```
+
+更新時
+
+```
+gcloud deployment-manager deployments update my-first-depl --config mydeploy.yaml
+```
