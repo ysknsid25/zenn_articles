@@ -123,3 +123,37 @@ gcloud deployment-manager deployments create my-first-depl --config mydeploy.yam
 ```
 gcloud deployment-manager deployments update my-first-depl --config mydeploy.yaml
 ```
+
+## Cloud Strorage
+
+そのプロジェクト内で作成したバケットの一覧を確認する
+
+```
+gsutil ls
+```
+
+バケットの中身を cloud shell の中にコピーする
+
+```
+gsutil cp gs:// <どっか>
+```
+
+バージョニングを有効にする
+
+```
+gsutil versioning set on <バケット名>
+```
+
+# これまでに登場したサービス
+
+Cloud Storage
+Cloud Datastore
+Cloud Bigtable
+Cloud SQL
+Spanner
+BigQuery
+IAM
+Compute Engine
+VPC
+GAE
+Load Balancer
