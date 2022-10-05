@@ -126,22 +126,43 @@ gcloud deployment-manager deployments update my-first-depl --config mydeploy.yam
 
 ## Cloud Strorage
 
-そのプロジェクト内で作成したバケットの一覧を確認する
+### そのプロジェクト内で作成したバケットの一覧を確認する
 
 ```
 gsutil ls
 ```
 
-バケットの中身を cloud shell の中にコピーする
+### バケットの中身を cloud shell の中にコピーする
 
 ```
 gsutil cp gs:// <どっか>
 ```
 
-バージョニングを有効にする
+### バージョニングを有効にする
 
 ```
 gsutil versioning set on <バケット名>
+```
+
+### CORS 構成を有効にする
+
+自分のローカルで CORS 構成の設定ファイルを作成する。
+
+```
+{
+  {
+    "origin": ["http://<ip>"],
+    "responseHeader": ["*"],
+    "method": ["*"].
+    "maxAgeSeconds": 1
+  }
+}
+```
+
+バケットのフォルダへコピー
+
+```
+gsutil cors set <ローカル> gs://<バケット>
 ```
 
 # これまでに登場したサービス
