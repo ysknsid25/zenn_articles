@@ -165,6 +165,12 @@ gsutil versioning set on <バケット名>
 gsutil cors set <ローカル> gs://<バケット>
 ```
 
+バケットを作成する
+
+```
+gsutil mb gs://<バケット名>
+```
+
 # これまでに登場したサービス
 
 Cloud Storage
